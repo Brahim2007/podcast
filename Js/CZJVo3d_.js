@@ -1,0 +1,1 @@
+import{u as e}from"./gYdCM_gN.js";import{h as a,u as r,n as s}from"./B9z7xr4s.js";import"./BuFx2LXW.js";import"./CLVawphA.js";const l=a((u,i)=>{const t=e(),o=r();if(t.getToken()===!1)return s(o("/"))});export{l as default};

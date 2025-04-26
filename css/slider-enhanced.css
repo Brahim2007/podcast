@@ -1,0 +1,94 @@
+/* دمج وتحسين تأثيرات السلايدر */
+
+/* تأثيرات التحميل التدريجي للصور */
+.blur-load {
+    background-position: 50%;
+    background-size: cover;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    transition: filter 0.3s ease-in-out;
+}
+
+.blur-load.with-border-radius {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.blur-load.loaded {
+    filter: none;
+}
+
+.blur-load.loaded img {
+    opacity: 1;
+}
+
+.blur-load img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* تحسينات Swiper الأساسية */
+.swiper {
+    overflow: visible;
+    padding: 2rem 0;
+}
+
+.swiper-slide {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.85);
+    opacity: 0.6;
+}
+
+.swiper-slide-active {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+
+/* تحسين أزرار التنقل */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--swiper-theme-color);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.1);
+}
+
+/* تحسين نقاط التنقل */
+.swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color, #ccc);
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--swiper-theme-color);
+    transform: scale(1.2);
+}
+
+/* تأثيرات إضافية للبطاقات */
+.program-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}

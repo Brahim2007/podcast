@@ -1,0 +1,100 @@
+/* أنماط منصات البودكاست */
+.podcastPlatforms { 
+    margin-bottom: 3em; 
+    margin-top: 5em; 
+    position: relative; 
+    z-index: 2 
+} 
+
+.podcastPlatforms .platforms-container { 
+    align-items: center; 
+    background-color: #fff; 
+    border-radius: 3em; 
+    box-shadow: 0 0 15px #00000026; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    overflow: hidden; 
+    padding: .75em 1.5em 
+} 
+
+.podcastPlatforms .platforms-container .platform-item { 
+    flex-grow: 1; 
+    overflow: hidden; 
+    padding: 1em; 
+    position: relative 
+} 
+
+.podcastPlatforms .platforms-container .platform-item:last-of-type { 
+    border: none 
+} 
+
+.podcastPlatforms .platforms-container .platform-item:first-of-type a img { 
+    width: 4em 
+} 
+
+.podcastPlatforms .platforms-container .platform-item a { 
+    align-items: center; 
+    display: flex; 
+    justify-content: center 
+} 
+
+.podcastPlatforms .platforms-container .platform-item a img { 
+    -o-object-fit: contain; 
+    object-fit: contain; 
+    transition: .5s cubic-bezier(.47,1.64,.41,.8); 
+    transition-delay: .15s; 
+    width: 2.5em 
+} 
+
+.podcastPlatforms .platforms-container .platform-item a img.alternative-image { 
+    position: absolute; 
+    right: 1.2%; 
+    top: 29%; 
+    transform: translateY(200%) 
+} 
+
+.podcastPlatforms .platforms-container .platform-item a p { 
+    color: #000000d9; 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+    margin-bottom: 0; 
+    margin-inline-end:.75em;
+    transition: .5s cubic-bezier(.47,1.64,.41,.8); 
+    transition-delay: .15s 
+} 
+
+.podcastPlatforms .platforms-container .platform-item a p.alternative-text { 
+    position: absolute; 
+    right: 5.2em; 
+    top: 29%; 
+    transform: translateY(-200%) 
+} 
+
+@media screen and (max-width: 992px) { 
+    .podcastPlatforms .platforms-container { 
+        box-shadow:0 0 12px #0000001a; 
+        padding: .75em .5em 
+    } 
+
+    .podcastPlatforms .platforms-container .platform-item { 
+        flex-grow: unset 
+    } 
+
+    .podcastPlatforms .platforms-container .platform-item a img { 
+        width: 1.5em 
+    } 
+
+    .podcastPlatforms .platforms-container .platform-item a img.alternative-image { 
+        display: none 
+    } 
+
+    .podcastPlatforms .platforms-container .platform-item a p { 
+        font-size: 1rem 
+    } 
+
+    .podcastPlatforms .platforms-container .platform-item a p.alternative-text { 
+        display: none; 
+        right: 48% 
+    } 
+}

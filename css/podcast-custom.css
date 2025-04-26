@@ -1,0 +1,92 @@
+/* تعديلات مخصصة لصفحة البودكاست */
+
+/* إضافة مسافة بين الهيدر وقسم البودكاست */
+.podcast-page[data-v-50e8307d] {
+    margin-top: 40px; /* إضافة مسافة علوية */
+    font-family: dubai, sans-serif; /* تطبيق خط Dubai */
+}
+
+/* تعديل عرض السلايدر لإظهار أجزاء من البطاقات المجاورة */
+.podcast-page .slider-section .slider-part[data-v-50e8307d] {
+    margin-top: 2em; /* زيادة المسافة العلوية */
+    padding: 2em 0; /* إضافة مساحة لرفع البطاقة الوسطى */
+    position: relative;
+}
+
+.podcast-page .slider-section .slider-part .podcasts-slider[data-v-50e8307d] {
+    overflow: visible !important;
+    padding: 20px 0; /* إضافة مساحة للبطاقة المرتفعة */
+}
+
+/* ضبط إعدادات Swiper لتعديل كيفية عرض البطاقات */
+.podcast-page .slider-section .slider-part .podcasts-slider .swiper-wrapper {
+    display: flex;
+    align-items: center; /* محاذاة البطاقات عمودياً */
+}
+
+/* إعدادات البطاقات غير النشطة */
+.podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item[data-v-50e8307d] {
+    opacity: 0.7; /* زيادة شفافية البطاقات غير النشطة */
+    transform: scale(0.6); /* تصغير البطاقات لتظهر أجزاء من البطاقات المجاورة */
+    transition: all 0.3s ease-in-out; /* تحسين سرعة الانتقال */
+    filter: blur(0px); /* إزالة التأثير الضبابي */
+    max-width: 85%; /* تحديد عرض أقصى للبطاقات */
+    border-radius: 8px; /* إضافة حواف مدورة للبطاقات */
+    overflow: hidden;
+    margin: 0 -15%; /* استخدام قيمة سالبة للمارجن لإظهار أجزاء من البطاقات المجاورة */
+}
+
+/* تعديل البطاقة النشطة للظهور أكبر حجماً ومرتفعة */
+.podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-active[data-v-50e8307d] {
+    opacity: 1; /* شفافية كاملة للبطاقة النشطة */
+    transform: scale(0.7) translateY(-15px); /* تكبير وترفيع البطاقة النشطة للأعلى */
+    filter: blur(0); /* تأكيد إزالة التأثير الضبابي من البطاقة النشطة */
+    z-index: 10; /* رفع البطاقة النشطة للأمام */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* ظل أكبر للبطاقة النشطة */
+    max-width: 88%; /* زيادة العرض الأقصى للبطاقة النشطة */
+}
+
+/* تعديل الشرائح السابقة واللاحقة للبطاقة النشطة مباشرة لجعلها بارزة */
+.podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-prev,
+.podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-next {
+    opacity: 0.8; /* جعلها أقل شفافية من البطاقات الأخرى */
+    transform: scale(0.65); /* حجم وسط بين البطاقة النشطة والبطاقات الأخرى */
+    z-index: 5; /* جعلها في مستوى أعلى من باقي البطاقات غير النشطة */
+    margin: 0 -12%; /* تعديل المارجن السالب لإظهار قدر أكبر من البطاقات المجاورة */
+}
+
+/* تعديلات للشاشات المتوسطة */
+@media screen and (max-width: 991px) {
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item[data-v-50e8307d] {
+        margin: 0 -10%; /* تعديل المارجن للشاشات المتوسطة */
+        transform: scale(0.55);
+    }
+    
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-active[data-v-50e8307d] {
+        transform: scale(0.65) translateY(-12px); /* تقليل الرفع قليلاً للشاشات المتوسطة */
+    }
+    
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-prev,
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-next {
+        transform: scale(0.6);
+        margin: 0 -8%;
+    }
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media screen and (max-width: 567px) {
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item[data-v-50e8307d] {
+        margin: 0 -5%; /* تقليل المارجن للشاشات الصغيرة */
+        transform: scale(0.5);
+    }
+    
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-active[data-v-50e8307d] {
+        transform: scale(0.55) translateY(-8px); /* تقليل الرفع أكثر للشاشات الصغيرة */
+    }
+    
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-prev,
+    .podcast-page .slider-section .slider-part .podcasts-slider .podcast-slider-item.swiper-slide-next {
+        transform: scale(0.52);
+        margin: 0 -4%;
+    }
+}

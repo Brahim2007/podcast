@@ -1,0 +1,153 @@
+/* أنماط مخصصة لعرض Swiper */
+
+/* أنماط قسم العرض المتحرك */
+.home-slider {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-slider .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home-slider .section-title h3 {
+    color: #3e5960;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home-slider .section-title p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.home-slider .mainYellowBtn {
+    background: transparent;
+    border: 2px solid #fdcc1d;
+    border-radius: 1.5em;
+    color: #3e5960;
+    font-weight: 700;
+    padding: .5em 1.8em;
+    text-align: center;
+    transition: .3s ease-in-out;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.home-slider .mainYellowBtn:hover {
+    background: #fdcc1d;
+    color: #fff;
+}
+
+/* أنماط بطاقات البرامج */
+.program-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.program-card .image {
+    border-radius: 8px;
+    height: 200px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.program-card .image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.program-card:hover .image img {
+    transform: scale(1.05);
+}
+
+.program-card h5 {
+    color: #3e5960;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.program-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* أنماط أزرار التنقل في Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(253, 204, 29, 0.8);
+    border-radius: 50%;
+    color: #fff !important;
+    height: 40px;
+    width: 40px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(253, 204, 29, 1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+}
+
+/* أنماط نقاط التنقل */
+.swiper-pagination-bullet {
+    background: #3e5960;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fdcc1d;
+    opacity: 1;
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .home-slider {
+        padding: 2rem 0;
+    }
+    
+    .home-slider .section-title h3 {
+        font-size: 1.8rem;
+    }
+    
+    .program-card .image {
+        height: 160px;
+    }
+    
+    .program-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 35px;
+        width: 35px;
+    }
+}
